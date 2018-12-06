@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Archives - 赵殿龙 | Blog
+          禁止Backspace键回退网页 - 赵殿龙 | Blog
         
     </title>
 
-    <link rel="canonical" href="http://www.zhaodianlong.com/archive/">
+    <link rel="canonical" href="http://www.zhaodianlong.com/2018/12/06/backspace/backspace/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -78,8 +78,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/header_img/archive-bg.png')
-            /*page*/
+            background-image: url('http://img.zhaodianlong.top/backspace.jpg')
+            /*post*/
         
     }
     
@@ -96,10 +96,18 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="site-heading">
-                        <h1>Archives</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">Hey, this is archives</span>
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Web" title="Web">Web</a>
+                            
+                        </div>
+                        <h1>禁止Backspace键回退网页</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by 赵殿龙 on
+                            2018-12-06
+                        </span>
                     </div>
                 
 
@@ -202,135 +210,144 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Modify by Yu-Hsuan Yen -->
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h4><span id="禁止backspace键回退网页">禁止Backspace键回退网页</span></h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 防止backspace键后退网页 */</span></span><br><span class="line"><span class="built_in">document</span>.onkeydown = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (event.keyCode == <span class="number">8</span>) &#123;</span><br><span class="line">    <span class="comment">// 获取焦点类型</span></span><br><span class="line">    <span class="keyword">var</span> type = <span class="built_in">document</span>.activeElement.type;</span><br><span class="line">    <span class="keyword">if</span> (type == <span class="string">"text"</span> || type == <span class="string">"textarea"</span> || type == <span class="string">"password"</span> || type == <span class="string">"select"</span>) &#123;</span><br><span class="line">      <span class="comment">// 判断焦点类型，无法输入的类型一律屏蔽</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">document</span>.activeElement.readOnly == <span class="literal">false</span>) &#123;</span><br><span class="line">      <span class="comment">// 如果不是只读，则执行本次backspace按键</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    event.keyCode = <span class="number">0</span>;<span class="comment">// 将本次按键设为0（即无按键）  </span></span><br><span class="line">    event.returnValue = <span class="literal">false</span>;  </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
                 
 
-                <!-- 如果开启评论功能 -->
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2018/11/29/regex/regex/" data-toggle="tooltip" data-placement="top" title="常用正则表达式">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+  
+    <style>
+      span.toc-nav-number{
+        display: none
+      }
+    </style>
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">禁止Backspace键回退网页</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#Web" title="Web">Web</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://zhaodianlong.github.io/vuepress_surface/" target="_blank">前端面试题整理</a></li>
+                    
+                </ul>
                 
             </div>
-
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">  
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">TAGS</a></h5>
-    <div class="tags">
-        
-            
-        
-            
-            <a href="/tags/#Python" title="Python" rel="4">Python</a>
-            
-        
-            
-        
+        </div>
     </div>
-</section>
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">ABOUT</a></h5>
-    <div class="short-about">
-
-        
-            <img id="avatar_pic" src="/img/me.jpg">
-        
-
-        
-            <p>越长大越发现，所谓成熟，不是你能拥有多少，而是你舍得放下多少。</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-            
-            
-
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank" href="https://github.com/zhaodianlong">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-                <li>
-                    <a target="_blank" href="https://www.linkedin.com/in/殿龙-赵-5b1b41129">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-        </ul>
-    </div>
-</section>
-        <hr>
-    
-        
-    <h5>ARCHIVE</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li></ul>
-    </div>
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5>FRIENDS</h5>
-<ul class="list-inline">
-
-    
-        <li><a href="https://zhaodianlong.github.io/vuepress_surface/" target="_blank">前端面试题整理</a></li>
-    
-</ul>
-
-        <hr>
-    
-    <div style="margin-left: -10px;">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="270" src="//music.163.com/outchain/player?type=0&id=2540732205&auto=1&height=430"></iframe>
-    </div>
-</div>
+</article>
 
 
-        
-    </div>
-</div>
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
