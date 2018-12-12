@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          常用正则表达式 - 赵殿龙 | Blog
+          玩转Vuepress - 赵殿龙 | Blog
         
     </title>
 
-    <link rel="canonical" href="http://www.zhaodianlong.com/2018/11/29/regex/regex/">
+    <link rel="canonical" href="http://www.zhaodianlong.com/2018/05/12/vuepress/vuepress/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -99,14 +99,14 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Regex" title="Regex">Regex</a>
+                              <a class="tag" href="/tags/#Vuepress" title="Vuepress">Vuepress</a>
                             
                         </div>
-                        <h1>常用正则表达式</h1>
+                        <h1>玩转Vuepress</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by 赵殿龙 on
-                            2018-11-29
+                            2018-05-12
                         </span>
                     </div>
                 
@@ -223,66 +223,44 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3><span id="一-校验数字的表达式">一、校验数字的表达式</span></h3>
+                <h3><span id="vuepress教程">vuepress教程</span></h3>
+<h4><span id="介绍">介绍</span></h4>
+<p>VuePress 由两部分组成：一个以 Vue 驱动的主题系统的简约静态网站生成工具，和一个为编写技术文档而优化的默认主题。它是为了支持 Vue 子项目的文档需求而创建的。</p>
+<p>由 VuePress 生成的每个页面，都具有相应的预渲染静态 HTML，它们能提供出色的加载性能，并且对 SEO 友好。然而，页面加载之后，Vue 就会将这些静态内容，接管为完整的单页面应用程序(SPA)。当用户在浏览站点时，可以按需加载其他页面</p>
+<h4><span id="起步">起步</span></h4>
+<h5><span id="全局安裝">全局安裝</span></h5>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局安装</span></span><br><span class="line">npm install -g vuepress</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个 markdown 文件</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'# Hello VuePress'</span> &gt; README.md</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开始编写文档</span></span><br><span class="line">vuepress dev</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建</span></span><br><span class="line">vuepress build</span><br></pre></td></tr></table></figure>
+<h5><span id="在已有项目中安裝">在已有项目中安裝</span></h5>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装为本地依赖项</span></span><br><span class="line">npm install -D vuepress</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个 docs 目录</span></span><br><span class="line">mkdir docs</span><br><span class="line"><span class="comment"># 创建一个 markdown 文件</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'# Hello VuePress'</span> &gt; docs/README.md</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开始编写文档</span></span><br><span class="line">npx vuepress dev docs</span><br></pre></td></tr></table></figure>
+<p>在package.json中添加命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"docs:dev"</span>: <span class="string">"vuepress dev docs"</span>,</span><br><span class="line">    <span class="string">"docs:build"</span>: <span class="string">"vuepress build docs"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>之后在命令行中运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 本地服务</span><br><span class="line">npm run docs:dev</span><br><span class="line"></span><br><span class="line">// 打包</span><br><span class="line">npm run docs:build</span><br></pre></td></tr></table></figure>
+<h5><span id="目录结构">目录结构</span></h5>
+<p><img src="./1544599009342.png" alt="Alt text"></p>
+<h3><span id="配置">配置</span></h3>
+<p>首先需要在文档目录中创建一个 .vuepress 目录。这是放置所有 VuePress 特有(VuePress-specific) 文件的地方。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  title: <span class="string">'前端面试宝典'</span>,</span><br><span class="line">  description: <span class="string">'前端面试宝典'</span>,</span><br><span class="line">  base: <span class="string">'/'</span>,</span><br><span class="line">  themeConfig: &#123;</span><br><span class="line">	head: [</span><br><span class="line">      [<span class="string">'link'</span>, &#123; <span class="attr">rel</span>: <span class="string">'icon'</span>, <span class="attr">href</span>: <span class="string">`/logo.png`</span> &#125;]</span><br><span class="line">    ],</span><br><span class="line">    nav: [</span><br><span class="line">      &#123; <span class="attr">text</span>: <span class="string">'Home'</span>, <span class="attr">link</span>: <span class="string">'/'</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">text</span>: <span class="string">'Github'</span>, <span class="attr">link</span>: <span class="string">'https://github.com/zhaodianlong'</span> &#125;,</span><br><span class="line">    ],</span><br><span class="line">    sidebar: [</span><br><span class="line">      [<span class="string">'/'</span>,<span class="string">'常见问题'</span>],</span><br><span class="line">      [<span class="string">'/Vue'</span>,<span class="string">'Vue常见面试题'</span>]</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>数字：<code>^[0-9]*$</code></li>
-<li>n位的数字：<code>^\d{n}$</code></li>
-<li>至少n位的数字：<code>^\d{n,}$</code></li>
-<li>m-n位的数字：<code>^\d{m,n}$</code></li>
-<li>零和非零开头的数字：<code>^(0|[1-9][0-9]*)$</code></li>
-<li>非零开头的最多带两位小数的数字：<code>^([1-9][0-9]*)+(.[0-9]{1,2})?$</code></li>
-<li>带1-2位小数的正数或负数：<code>^(\-)?\d+(\.\d{1,2})?$</code></li>
-<li>正数、负数、和小数：<code>^(\-|\+)?\d+(\.\d+)?$</code></li>
-<li>有两位小数的正实数：<code>^[0-9]+(.[0-9]{2})?$</code></li>
-<li>有1~3位小数的正实数：<code>^[0-9]+(.[0-9]{1,3})?$</code></li>
-<li>非零的正整数：<code>^[1-9]\d*$</code> 或 <code>^([1-9][0-9]*){1,3}$</code> 或 <code>^\+?[1-9][0-9]*$</code></li>
-<li>非零的负整数：<code>^\-[1-9][]0-9″*$</code> 或 <code>^-[1-9]\d*$</code></li>
-<li>非负整数：<code>^\d+$</code> 或 <code>^[1-9]\d*|0$</code></li>
-<li>非正整数：<code>^-[1-9]\d*|0$</code> 或 <code>^((-\d+)|(0+))$</code></li>
-<li>非负浮点数：<code>^\d+(\.\d+)?$</code> 或 <code>^[1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0$</code></li>
-<li>非正浮点数：<code>^((-\d+(\.\d+)?)|(0+(\.0+)?))$</code> 或 <code>^(-([1-9]\d*\.\d*|0\.\d*[1-9]\d*))|0?\.0+|0$</code></li>
-<li>正浮点数：<code>^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$</code> 或 <code>^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$</code></li>
-<li>负浮点数：<code>^-([1-9]\d*\.\d*|0\.\d*[1-9]\d*)$</code> 或 <code>^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$</code></li>
-<li>浮点数：<code>^(-?\d+)(\.\d+)?$</code> 或 <code>^-?([1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0)$</code></li>
-</ul>
-<h3><span id="二-校验字符的表达式">二、校验字符的表达式</span></h3>
+<li>title: 网站标题</li>
+<li>description: 网站描述</li>
+<li>网站将在其部署的基本 URL</li>
+<li>themeConfig: 主题配置
 <ul>
-<li>汉字：<code>^[\u4e00-\u9fa5]{0,}$</code></li>
-<li>英文和数字：<code>^[A-Za-z0-9]+$</code> 或 <code>^[A-Za-z0-9]{4,40}$</code></li>
-<li>长度为3-20的所有字符：<code>^.{3,20}$</code></li>
-<li>由26个英文字母组成的字符串：<code>[A-Za-z]+$</code></li>
-<li>由26个大写英文字母组成的字符串：<code>[A-Z]+$</code></li>
-<li>由26个小写英文字母组成的字符串：<code>^[a-z]+$</code></li>
-<li>由数字和26个英文字母组成的字符串：<code>^[A-Za-z0-9]+$</code></li>
-<li>由数字、26个英文字母或者下划线组成的字符串：<code>^\w+$</code> 或 <code>^\w{3,20}$</code></li>
-<li>中文、英文、数字包括下划线：<code>^[\u4E00-\u9FA5A-Za-z0-9_]+$</code></li>
-<li>中文、英文、数字但不包括下划线等符号：<code>^[\u4E00-\u9FA5A-Za-z0-9]+$</code> 或 <code>^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$</code></li>
-<li>可以输入含有^%&amp;’,;=?$\”等字符：<code>[^%&amp;',;=?$\x22]+</code></li>
-<li>禁止输入含有~的字符：<code>[^~\x22]+</code></li>
+<li>head: 头部</li>
+<li>nav: 导航栏</li>
+<li>sidebar: 侧边栏(<code>['/Vue','Vue常见面试题'], Vue 为 .md文件名</code>)</li>
 </ul>
-<h3><span id="三-特殊需求表达式">三、特殊需求表达式</span></h3>
+</li>
+</ul>
+<h3><span id="部署github">部署GitHub</span></h3>
 <ul>
-<li>Email地址：<code>^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$</code></li>
-<li>域名：<code>[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?</code></li>
-<li>InternetURL：<code>[a-zA-z]+://[^\s]*</code> 或 <code>^http://([\w-]+\.)+[\w-]+(/[\w-./?%&amp;=]*)?$</code></li>
-<li>手机号码：<code>^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$</code></li>
-<li>电话号码(“XXX-XXXXXXX”、”XXXX-XXXXXXXX”、”XXX-XXXXXXX”、”XXX-XXXXXXXX”、”XXXXXXX”和”XXXXXXXX)：<code>^($$\d{3,4}-)|\d{3.4}-)?\d{7,8}$</code></li>
-<li>国内电话号码(0511-4405222、021-87888822)：<code>\d{3}-\d{8}|\d{4}-\d{7}</code></li>
-<li>身份证号(15位、18位数字)：<code>^\d{15}|\d{18}$</code></li>
-<li>短身份证号码(数字、字母x结尾)：<code>^([0-9]){7,18}(x|X)?$</code> 或 <code>^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$</code></li>
-<li>帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：<code>^[a-zA-Z][a-zA-Z0-9_]{4,15}$</code></li>
-<li>密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)：<code>^[a-zA-Z]\w{5,17}$</code></li>
-<li>强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间)：<code>^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$</code></li>
-<li>日期格式：<code>^\d{4}-\d{1,2}-\d{1,2}</code></li>
-<li>中文字符的正则表达式：<code>[\u4e00-\u9fa5]</code></li>
-<li>双字节字符：<code>[^\x00-\xff]</code> (包括汉字在内，可以用来计算字符串的长度(一个双字节字符长度计2，ASCII字符计1))</li>
-<li>空白行的正则表达式：<code>\n\s*\r</code> (可以用来删除空白行)</li>
-<li>首尾空白字符的正则表达式：<code>^\s*|\s*$</code> 或 <code>(^\s*)|(\s*$)</code> (可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式)</li>
-<li>腾讯QQ号：<code>[1-9][0-9]{4,}</code> (腾讯QQ号从10000开始)</li>
-<li>中国邮政编码：<code>[1-9]\d{5}(?!\d)</code> (中国邮政编码为6位数字)</li>
-<li>IP地址：<code>\d+\.\d+\.\d+\.\d+</code> (提取IP地址时有用)</li>
-<li>IP地址：<code>((?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d))</code></li>
+<li>将 .vuepress/config.js 中的 base 设置为你的仓库名称。例如，如果你的仓库是 <a href="https://github.com/foo/bar" target="_blank" rel="noopener">https://github.com/foo/bar</a> ，则已部署的页面将在 <a href="https://foo.github.io/bar" target="_blank" rel="noopener">https://foo.github.io/bar</a> 上可用。在这种情况下，你应该将base设置为 “/bar/” 。</li>
+<li>在你的项目中，运行：</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env sh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 确保脚本抛出遇到的错误</span></span><br><span class="line"><span class="built_in">set</span> -e</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成静态文件</span></span><br><span class="line">npm run docs:build</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入生成的文件夹</span></span><br><span class="line"><span class="built_in">cd</span> docs/.vuepress/dist</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果是发布到自定义域名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'www.example.com'</span> &gt; CNAME</span><br><span class="line"></span><br><span class="line">git init</span><br><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">'deploy'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ....</span></span><br><span class="line"><span class="comment"># 如果发布到 https://&lt;USERNAME&gt;.github.io</span></span><br><span class="line"><span class="comment"># git push -f git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git master</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果发布到 https://&lt;USERNAME&gt;.github.io/&lt;REPO&gt;</span></span><br><span class="line"><span class="comment"># git push -f git@github.com:&lt;USERNAME&gt;/&lt;REPO&gt;.git master:gh-pages</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> -</span><br></pre></td></tr></table></figure>
+<h3><span id="参考">参考</span></h3>
+<p><a href="http://caibaojian.com/vuepress/guide/" target="_blank" rel="noopener">VuePress中文网</a></p>
 
                 
 
@@ -291,12 +269,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2018/12/06/backspace/backspace/" data-toggle="tooltip" data-placement="top" title="禁止Backspace键回退网页">&larr; Previous Post</a>
+                            <a href="/2018/11/29/regex/regex/" data-toggle="tooltip" data-placement="top" title="常用正则表达式">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2018/05/12/vuepress/vuepress/" data-toggle="tooltip" data-placement="top" title="玩转Vuepress">Next Post &rarr;</a>
+                            <a href="/2017/09/11/python/basics/python-object-oriented-programming/" data-toggle="tooltip" data-placement="top" title="[Python] Python系列（四）之面向对象编程">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -329,7 +307,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、校验数字的表达式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、校验字符的表达式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、特殊需求表达式</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">vuepress教程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">介绍</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">起步</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">全局安裝</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">在已有项目中安裝</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">目录结构</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">部署GitHub</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">参考</span></a></li></ol>
         
         </div>
       </aside>
@@ -349,7 +327,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Regex" title="Regex">Regex</a>
+                          <a class="tag" href="/tags/#Vuepress" title="Vuepress">Vuepress</a>
                         
                     </div>
                 </section>
