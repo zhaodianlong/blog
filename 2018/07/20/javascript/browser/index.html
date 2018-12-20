@@ -14,7 +14,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          统计浏览器信息 - 赵殿龙 | Blog
+          统计浏览器信息 - 赵殿龙
         
     </title>
 
@@ -105,7 +105,7 @@
                         <h1>统计浏览器信息</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
-                            Posted by 赵殿龙 on
+                            Posted by 鱼丸蛋面 on
                             2018-07-20
                         </span>
                     </div>
@@ -153,6 +153,13 @@
 
                         
                         <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -161,13 +168,6 @@
                         
                         <li>
                             <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -223,7 +223,7 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3><span id="统计各个浏览器信息及各浏览器的判断条件">统计各个浏览器信息，及各浏览器的判断条件</span></h3>
+                <h3><span id="统计各个浏览器信息">统计各个浏览器信息</span></h3>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getBrowserInfo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> ua = navigator.userAgent.toLocaleLowerCase()</span><br><span class="line">  <span class="keyword">var</span> browserType = <span class="literal">null</span></span><br><span class="line">  <span class="keyword">if</span> (ua.match(<span class="regexp">/msie/</span>) != <span class="literal">null</span> || ua.match(<span class="regexp">/trident/</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">    browserType = <span class="string">'IE'</span></span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (ua.match(<span class="regexp">/firefox/</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">    browserType = <span class="string">'Firefox'</span></span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (ua.match(<span class="regexp">/ubrowser/</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">    browserType = <span class="string">'UC'</span></span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (ua.match(<span class="regexp">/opera/</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">    browserType = <span class="string">'Opera'</span></span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (ua.match(<span class="regexp">/bidubrowser/</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">    browserType = <span class="string">'Baidu'</span></span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (ua.match(<span class="regexp">/metasr/</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">    browserType = <span class="string">'Sogou'</span></span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (ua.match(<span class="regexp">/tencenttraveler/</span>) != <span class="literal">null</span> || ua.match(<span class="regexp">/qqbrowse/</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">    browserType = <span class="string">'QQ'</span></span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (ua.match(<span class="regexp">/chrome/</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> is360 = _mime(<span class="string">'type'</span>, <span class="string">'application/vnd.chromium.remoting-viewer'</span>)</span><br><span class="line">    <span class="keyword">if</span> (is360) &#123;</span><br><span class="line">      browserType = <span class="string">'360'</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      browserType = <span class="string">'Chrome'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (ua.match(<span class="regexp">/safari/</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">    browserType = <span class="string">'Safari'</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    browserType = <span class="string">'Other'</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> browserType</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">_mime</span>(<span class="params">option, value</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> mimeTypes = navigator.mimeTypes</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> mt <span class="keyword">in</span> mimeTypes) &#123;</span><br><span class="line">    <span class="keyword">if</span> (mimeTypes[mt][option] === value) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用函数</span></span><br><span class="line">getBrowserInfo()</span><br><span class="line"><span class="built_in">console</span>.log(browserType)</span><br></pre></td></tr></table></figure>
 
                 
@@ -271,7 +271,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">统计各个浏览器信息，及各浏览器的判断条件</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">统计各个浏览器信息</span></a></li></ol>
         
         </div>
       </aside>
@@ -396,7 +396,20 @@
         </div>
     </div>
 </div></footer>
-
+<div class="ali-record">
+    ©鱼丸蛋面 <a href="http://www.miitbeian.gov.cn/" target="_blank">浙ICP备18020853号-2</a>
+</div>
+<style>
+.ali-record{
+    text-align:center;
+    font-size: 12px;
+    font-weight: 400;
+    color: #C0C0C0;
+}
+.ali-record a{
+    color: #C0C0C0;
+}
+</style>
 <!-- jQuery -->
 <script src="/js/jquery.min.js"></script>
 
