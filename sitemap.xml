@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.zhaodianlong.com/2017/09/11/python/basics/python-advanced-features/</loc>
+    
+    <lastmod>2019-01-16T06:28:09.204Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.zhaodianlong.com/2019/01/16/javascript/vue-quill-editor/</loc>
+    
+    <lastmod>2019-01-16T06:25:40.756Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.zhaodianlong.com/2018/12/21/javascript/nuxt-rem/</loc>
     
     <lastmod>2018-12-21T02:43:48.966Z</lastmod>
@@ -44,7 +58,7 @@
   </url>
   
   <url>
-    <loc>http://www.zhaodianlong.com/2017/09/11/python/basics/python-advanced-features/</loc>
+    <loc>http://www.zhaodianlong.com/2017/09/11/python/basics/python-object-oriented-programming/</loc>
     
     <lastmod>2018-11-20T12:18:44.000Z</lastmod>
     
@@ -58,13 +72,6 @@
   </url>
   
   <url>
-    <loc>http://www.zhaodianlong.com/2017/09/11/python/basics/python-object-oriented-programming/</loc>
-    
-    <lastmod>2018-11-20T12:18:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.zhaodianlong.com/404.html</loc>
     
     <lastmod>2017-09-24T04:40:20.000Z</lastmod>
@@ -72,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://www.zhaodianlong.com/archive/index.html</loc>
+    <loc>http://www.zhaodianlong.com/about/index.html</loc>
     
     <lastmod>2017-09-24T04:40:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.zhaodianlong.com/about/index.html</loc>
+    <loc>http://www.zhaodianlong.com/archive/index.html</loc>
     
     <lastmod>2017-09-24T04:40:20.000Z</lastmod>
     
